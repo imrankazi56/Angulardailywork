@@ -1,0 +1,15 @@
+<p>property works!</p>
+<input type="text"[disabled]="disablebox" [value]="name">
+<br>
+<br>
+<input type="text" disabled={{disablebox}} value={{name}}>
+<br>
+<br>
+<button (click)="enable()">Enable Text Box</button>
+<ul>
+    <li>
+        
+    </li>
+</ul>
+<p>Enter food name</p>
+<input type="text" #item (keyup.enter)="addtoFood(item.value)">

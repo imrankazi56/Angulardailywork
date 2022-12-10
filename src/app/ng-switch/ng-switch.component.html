@@ -1,0 +1,15 @@
+<div class = "container">
+    <div class="row">
+        <div class="col-nd-4">
+            <select class="Form Control"(change)="getProductValue($event)">
+                <option value="Laptop"> laptop</option>
+                <option value="mobile">mobile</option>
+            </select>
+
+        </div>
+        <div class="col-md-12"[ngSwitch]="SelectedProduct">
+
+        </div>
+
+    </div>
+</div>

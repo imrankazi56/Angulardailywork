@@ -1,0 +1,28 @@
+<p>arry-push-nd-remove works!</p>
+<div class="container mt=5">
+    <div class="row">
+        <div class="col-md-12">
+            <input #myUser type="text" class="form-control"[placeholder]="userName">
+            <button (click)="onClick(myUser)" class="btn btn-primary mt-3">Add Data</button>
+            <table class="table table-bordered mt-3">
+                 <thead class="thead-light">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>User Name</th>
+                        <th>Delete Data</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr *ngFor="let i of userList;index as srNo">
+                        <td>{{srNo+1}}</td>
+                        <td>{{i}}</td>
+                        <td>
+                           <button (click)="onDelete(srNo)" class="btn btn-success">Remove Data</button> 
+                        </td>
+                    </tr>
+                 </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

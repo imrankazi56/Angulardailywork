@@ -1,0 +1,34 @@
+<p>practise works!</p>
+<input type="button" (click)="callMe($event)" value=" click Me" >
+<h2>{{text}}</h2>
+<hr>
+<b>Two Way data Binding</b>
+<input type="text" [(ngModel)]="name" >
+<p>{{name}}</p>
+<br>
+<b>Data Binding using interpolation(from model /component view)</b>
+<br>
+Employee Name:<input type="text" value="{{employee.name}}"><br>
+Employee Salary:<input type="text" value="{{employee.salary}}"><br>
+Employee ID:<input type="text" value="{{employee.eid}}"><br>
+
+<hr>
+<b>Data Binding using PropertyBinding(from model /component view)</b>
+<br>
+Employee Name:<input type="text" [value]="employee.name"><br>
+Employee Salary:<input type="text" [value]="employee.salary"><br>
+Employee ID:<input type="text" [value]="employee.eid"><br>
+
+
+<b>Event Binding (from view to  model /component )</b>
+<br>
+Employee Name:<input type="text" #text value="{{employee.name}}" (keyup)="setName(text.value)"><br>
+Employee Salary:<input type="text" value="{{employee.salary}}"><br>
+Employee ID:<input type="text" value="{{employee.eid}}"><br>
+
+
+<b>Two way data Binding (from view to  model /component and model to view )</b>
+<br>
+Employee Name:<input type="text" value="{{employee.name}}" [(ngModel)]="employee.name" ><br>
+Employee Salary:<input type="text" value="{{employee.salary}}"[(ngModel)]="employee.salary"><br>
+Employee ID:<input type="text" value="{{employee.eid}}" [(ngModel)]="employee.eid"><br>

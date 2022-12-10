@@ -1,0 +1,19 @@
+
+<div [ngStyle]="{'color':'red'}">
+    learning Angular
+</div>
+<h4>
+<ul *ngFor ="let person of people">
+    <li [ngClass]="{
+        'text-success':person.country==='India',
+        'text-primary':person.country==='USA',
+        'text-danger':person.country=== 'uk'
+    }"> 
+    {{person.name}} {{person.country}}
+</li>
+</ul>
+
+</h4>
+<p>Normal Para</p>
+<p appCustdir>Custom Para</p>
+<div></div>

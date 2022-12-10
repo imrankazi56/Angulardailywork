@@ -1,0 +1,24 @@
+<!-- <!-- 
+:-Name fild only character insert not accept symbol nd number.
+:-emmail -->
+<!-- email filed only accept emial id
+password:password filed minimum 4 character required
+button disabled till all filed fulfill. -->
+
+<form #loginForm="ngForm"(ngSubmit)="(loginForm.vale)">
+    <input type="text" pattern="[a-zA-Z]+$" required #name="ngModel" name="name" placeholder="Enter Name" ngModel>
+    <br>
+    <span *ngIf="name.invalid && name.touched" style="color: red;">Please Enter a Valid Input</span>
+    <br>
+    <input type="email"required #mail="ngModel" name="email" email  placeholder="Enter Mail id" ngModel>
+    <br>
+    <br>
+    <span *ngIf="mail.invalid && mail.touched" style="color: RED;"> enter Valid Mail id</span>
+    <br>
+    <br>
+    <input type="password" required #pass="ngModel" name="password" minlength="4" placeholder="Enter password" ngModel>
+    <br>
+    <span *ngIf="pass.invalid && pass.touched" style="color: red;">Please Enter a Valid Password</span>
+    <br>
+    <button [disabled]="loginForm.invalid">login</button>
+</form>
